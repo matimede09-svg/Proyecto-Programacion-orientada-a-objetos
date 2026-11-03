@@ -4,7 +4,7 @@ Este es nuestro proyecto final para la materia de Programación Orientada a Obje
 
 Todo está programado en Python utilizando únicamente la biblioteca estándar. 
 
-##  Cómo ejecutar el proyecto (Guía para Spyder)
+##  Cómo ejecutar el proyecto 
 
 1. **Para ver la simulación principal:**
    * Abre el archivo `main.py`.
@@ -41,11 +41,3 @@ Decidimos separar las responsabilidades en distintos archivos para mantener una 
 * `servicio_clima.py`: Contiene la interfaz abstracta del clima y la conexión real a Open-Meteo.
 * `gestor.py`: El `GestorEntregas`, la clase principal que coordina a los robots y las solicitudes.
 
-##  Nota sobre nuestro UML y la Privacidad en Python
-
-Como Python no tiene palabras reservadas como `private` o `protected` al estilo Java, adaptamos fielmente nuestro diagrama UML usando las convenciones estándar de Python:
-* Los atributos que en el UML tienen un **menos (`-`)**, los escribimos con doble guion bajo (`__atributo`) para activar el Name Mangling y hacerlos realmente privados.
-* Los atributos con un **numeral (`#`)**, los escribimos con un guion bajo (`_atributo`) para que sean protegidos.
-* Para los datos privados que el sistema necesita consultar, implementamos el decorador `@property` sin *setter*, garantizando que sean estrictamente de solo lectura.
-
-*(Para ver los cambios que hicimos respecto al diagrama UML original, revisa el archivo `CAMBIOS_DE_DISENO.md`)*
